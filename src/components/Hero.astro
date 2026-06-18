@@ -1,26 +1,31 @@
 ---
 import cafeImage from '../assets/images/cafe-alejandro.jpg';
 import { ui, type Lang } from '../i18n/ui';
+
 interface Props { lang: Lang; }
+
 const { lang } = Astro.props;
 const t = ui[lang];
 ---
+
 <section class="mx-auto grid max-w-6xl items-center gap-10 px-6 py-14 md:grid-cols-2 md:py-20">
   <div>
     <p class="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-terracotta">{t.eyebrow}</p>
     <h1 class="mb-6 text-5xl font-black leading-tight text-coffee md:text-7xl">{t.headline}</h1>
     <p class="mb-8 max-w-xl text-lg leading-8 text-espresso/80">{t.intro}</p>
+
     <div class="flex flex-wrap gap-4">
-    <a href="#menu" class="rounded-full bg-coffee px-6 py-3 font-bold text-foam transition hover:bg-terracotta">{t.primaryCta}</a>
-    <a href="#contact" class="rounded-full border border-coffee px-6 py-3 font-bold text-coffee transition hover:bg-coffee hover:text-foam">{t.secondaryCta}</a>
+      <a href="#menu" class="rounded-full bg-coffee px-6 py-3 font-bold text-foam transition hover:bg-terracotta">{t.primaryCta}</a>
+      <a href="#contact" class="rounded-full border border-coffee px-6 py-3 font-bold text-coffee transition hover:bg-coffee hover:text-foam">{t.secondaryCta}</a>
     </div>
 
-  <div class="mt-8 flex flex-wrap gap-3 text-sm font-bold text-coffee">
-  <span class="rounded-full bg-foam px-4 py-2 ring-1 ring-coffee/10">☕ Café artesanal</span>
-  <span class="rounded-full bg-foam px-4 py-2 ring-1 ring-coffee/10">🥐 Desayunos</span>
-  <span class="rounded-full bg-foam px-4 py-2 ring-1 ring-coffee/10">🌿 Producto local</span>
+    <div class="mt-8 flex flex-wrap gap-3 text-sm font-bold text-coffee">
+      <span class="rounded-full bg-foam px-4 py-2 ring-1 ring-coffee/10">☕ Café artesanal</span>
+      <span class="rounded-full bg-foam px-4 py-2 ring-1 ring-coffee/10">🥐 Desayunos</span>
+      <span class="rounded-full bg-foam px-4 py-2 ring-1 ring-coffee/10">🌿 Producto local</span>
+    </div>
   </div>
-  </div>
+
   <div class="relative">
     <div class="absolute -inset-4 rounded-[2.5rem] bg-terracotta/20"></div>
     <img src={cafeImage.src} alt="Café con el nombre Alejandro escrito sobre la espuma" class="relative aspect-[4/5] w-full rounded-[2rem] object-cover shadow-2xl" />
