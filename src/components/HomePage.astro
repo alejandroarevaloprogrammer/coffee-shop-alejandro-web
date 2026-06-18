@@ -65,13 +65,108 @@ const t = ui[lang];
     </section>
 
     <section id="menu" class="mx-auto max-w-6xl px-6 py-16">
-      <h2 class="mb-8 text-4xl font-black text-coffee">{t.menuTitle}</h2>
-      <div class="grid gap-6 md:grid-cols-3">
-        <MenuCard title={t.coffee} text="Espresso, latte, cappuccino y café de filtro." />
-        <MenuCard title={t.breakfast} text="Tostadas, bocadillos, fruta y opciones sencillas para empezar bien." />
-        <MenuCard title={t.sweets} text="Croissants, tartas caseras y pequeños caprichos para acompañar el café." />
+  <div class="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+    <div>
+      <p class="mb-3 text-sm font-bold uppercase tracking-[0.25em] text-terracotta">Nuestra carta</p>
+      <h2 class="text-4xl font-black text-coffee">{t.menuTitle}</h2>
+    </div>
+    <p class="max-w-md text-espresso/75">
+      Una selección sencilla de cafés, desayunos y dulces pensada para acompañar cualquier momento del día.
+    </p>
+  </div>
+
+  <div class="grid gap-6 md:grid-cols-3">
+    <div class="rounded-3xl bg-foam p-8 ring-1 ring-coffee/10">
+      <h3 class="mb-6 text-2xl font-black text-coffee">Cafés</h3>
+
+      <div class="space-y-5">
+        <div class="flex justify-between gap-4 border-b border-coffee/10 pb-4">
+          <div>
+            <p class="font-bold text-espresso">Espresso</p>
+            <p class="text-sm text-espresso/65">Intenso, corto y aromático.</p>
+          </div>
+          <p class="font-black text-coffee">1,80€</p>
+        </div>
+
+        <div class="flex justify-between gap-4 border-b border-coffee/10 pb-4">
+          <div>
+            <p class="font-bold text-espresso">Cappuccino</p>
+            <p class="text-sm text-espresso/65">Café, leche cremosa y espuma.</p>
+          </div>
+          <p class="font-black text-coffee">2,90€</p>
+        </div>
+
+        <div class="flex justify-between gap-4">
+          <div>
+            <p class="font-bold text-espresso">Latte</p>
+            <p class="text-sm text-espresso/65">Suave, cremoso y equilibrado.</p>
+          </div>
+          <p class="font-black text-coffee">3,20€</p>
+        </div>
       </div>
-    </section>
+    </div>
+
+    <div class="rounded-3xl bg-foam p-8 ring-1 ring-coffee/10">
+      <h3 class="mb-6 text-2xl font-black text-coffee">Desayunos</h3>
+
+      <div class="space-y-5">
+        <div class="flex justify-between gap-4 border-b border-coffee/10 pb-4">
+          <div>
+            <p class="font-bold text-espresso">Tostada con tomate</p>
+            <p class="text-sm text-espresso/65">Pan crujiente, tomate y aceite.</p>
+          </div>
+          <p class="font-black text-coffee">3,50€</p>
+        </div>
+
+        <div class="flex justify-between gap-4 border-b border-coffee/10 pb-4">
+          <div>
+            <p class="font-bold text-espresso">Bocadillo pequeño</p>
+            <p class="text-sm text-espresso/65">Opción sencilla para media mañana.</p>
+          </div>
+          <p class="font-black text-coffee">4,20€</p>
+        </div>
+
+        <div class="flex justify-between gap-4">
+          <div>
+            <p class="font-bold text-espresso">Yogur con fruta</p>
+            <p class="text-sm text-espresso/65">Ligero, fresco y natural.</p>
+          </div>
+          <p class="font-black text-coffee">4,80€</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="rounded-3xl bg-foam p-8 ring-1 ring-coffee/10">
+      <h3 class="mb-6 text-2xl font-black text-coffee">Dulces</h3>
+
+      <div class="space-y-5">
+        <div class="flex justify-between gap-4 border-b border-coffee/10 pb-4">
+          <div>
+            <p class="font-bold text-espresso">Croissant</p>
+            <p class="text-sm text-espresso/65">Clásico, dorado y mantecoso.</p>
+          </div>
+          <p class="font-black text-coffee">1,90€</p>
+        </div>
+
+        <div class="flex justify-between gap-4 border-b border-coffee/10 pb-4">
+          <div>
+            <p class="font-bold text-espresso">Tarta casera</p>
+            <p class="text-sm text-espresso/65">Pregunta por la tarta del día.</p>
+          </div>
+          <p class="font-black text-coffee">4,50€</p>
+        </div>
+
+        <div class="flex justify-between gap-4">
+          <div>
+            <p class="font-bold text-espresso">Cookie artesanal</p>
+            <p class="text-sm text-espresso/65">Crujiente por fuera, tierna por dentro.</p>
+          </div>
+          <p class="font-black text-coffee">2,50€</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
     <section id="hours" class="mx-auto max-w-6xl px-6 py-16">
       <div class="grid gap-6 md:grid-cols-2">
