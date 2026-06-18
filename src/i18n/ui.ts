@@ -9,7 +9,9 @@ export type Lang = keyof typeof languages;
 export const ui = {
   es: {
     navMenu: 'Carta', navStory: 'Historia', navHours: 'Horarios', navContact: 'Contacto',
-    title: 'Café Alejandro', eyebrow: 'Café artesanal · desayuno · brunch',
+    title: 'Café Alejandro',
+    description: 'Café de especialidad, desayunos artesanales y repostería casera en un ambiente cálido y acogedor.',
+    eyebrow: 'Café artesanal · desayuno · brunch',
     headline: 'Un café con nombre propio.',
     intro: 'Una web cálida, moderna y cercana para una cafetería con identidad personal.',
     primaryCta: 'Ver carta', secondaryCta: 'Contacto',
@@ -21,7 +23,9 @@ export const ui = {
   },
   ca: {
     navMenu: 'Carta', navStory: 'Història', navHours: 'Horaris', navContact: 'Contacte',
-    title: 'Cafè Alejandro', eyebrow: 'Cafè artesanal · esmorzar · brunch',
+    title: 'Cafè Alejandro',
+    description: 'Cafè d’especialitat, esmorzars artesanals i rebosteria casolana en un ambient càlid i acollidor.',
+    eyebrow: 'Cafè artesanal · esmorzar · brunch',
     headline: 'Un cafè amb nom propi.',
     intro: 'Una web càlida, moderna i propera per a una cafeteria amb identitat personal.',
     primaryCta: 'Veure carta', secondaryCta: 'Contacte',
@@ -33,7 +37,9 @@ export const ui = {
   },
   en: {
     navMenu: 'Menu', navStory: 'Story', navHours: 'Hours', navContact: 'Contact',
-    title: 'Café Alejandro', eyebrow: 'Craft coffee · breakfast · brunch',
+    title: 'Café Alejandro',
+    description: 'Specialty coffee, artisan breakfasts and homemade pastries in a warm and welcoming atmosphere.',
+    eyebrow: 'Craft coffee · breakfast · brunch',
     headline: 'Coffee with a personal touch.',
     intro: 'A warm, modern and friendly website for a coffee shop with a personal identity.',
     primaryCta: 'View menu', secondaryCta: 'Contact',
