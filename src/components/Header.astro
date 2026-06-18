@@ -1,0 +1,17 @@
+---
+import LanguageSwitcher from './LanguageSwitcher.astro';
+import { ui, type Lang } from '../i18n/ui';
+interface Props { lang: Lang; }
+const { lang } = Astro.props;
+const t = ui[lang];
+---
+<header class="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
+  <a href={`/${lang}`} class="text-xl font-bold tracking-tight text-coffee">Café Alejandro</a>
+  <nav class="hidden gap-6 text-sm font-medium text-espresso md:flex">
+    <a href="#menu" class="hover:text-terracotta">{t.navMenu}</a>
+    <a href="#story" class="hover:text-terracotta">{t.navStory}</a>
+    <a href="#hours" class="hover:text-terracotta">{t.navHours}</a>
+    <a href="#contact" class="hover:text-terracotta">{t.navContact}</a>
+  </nav>
+  <LanguageSwitcher currentLang={lang} />
+</header>
