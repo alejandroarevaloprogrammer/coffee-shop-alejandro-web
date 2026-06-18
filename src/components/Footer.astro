@@ -1,3 +1,36 @@
-<footer class="mt-20 border-t border-coffee/10 px-6 py-10 text-center text-sm text-espresso/70">
-  <p>© Café Alejandro · Web Coffee Shop Alejandro v.1</p>
+---
+import LogoCoffeeIcon from './icons/LogoCoffeeIcon.astro';
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="mt-20 border-t border-coffee/10">
+  <div class="mx-auto max-w-6xl px-6 py-12">
+
+    <div class="flex flex-col items-center text-center">
+
+      <LogoCoffeeIcon class="mb-4 h-12 w-12 text-terracotta" />
+
+      <h3 class="text-2xl font-black text-coffee">
+        CAFÉ ALEJANDRO
+      </h3>
+
+      <p class="mt-2 text-espresso/70">
+        Café de especialidad · Desayunos artesanales · Producto local
+      </p>
+
+      <div class="mt-6 flex flex-wrap justify-center gap-6 text-sm font-medium">
+        <a href="#menu" class="hover:text-terracotta">Carta</a>
+        <a href="#story" class="hover:text-terracotta">Historia</a>
+        <a href="#hours" class="hover:text-terracotta">Horarios</a>
+        <a href="#contact" class="hover:text-terracotta">Contacto</a>
+      </div>
+
+      <div class="mt-8 text-sm text-espresso/60">
+        © {currentYear} Café Alejandro
+      </div>
+
+    </div>
+
+  </div>
 </footer>
