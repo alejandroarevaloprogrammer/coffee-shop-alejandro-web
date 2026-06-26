@@ -68,12 +68,26 @@ const t = ui[lang];
 </section>
 
     <section id="story" class="mx-auto max-w-6xl px-6 py-16">
-      <div class="rounded-[2rem] bg-coffee p-8 text-foam md:p-12">
-        <p class="mb-3 text-sm font-bold uppercase tracking-[0.25em] text-terracotta">Café Alejandro</p>
-        <h2 class="mb-4 text-4xl font-black">{t.storyTitle}</h2>
-        <p class="max-w-3xl text-lg leading-8 text-foam/85">{t.storyText}</p>
-      </div>
-    </section>
+  <div class="rounded-[2rem] bg-coffee p-8 text-foam md:p-12">
+    <p class="mb-3 text-sm font-bold uppercase tracking-[0.25em] text-terracotta">
+      Café Alejandro
+    </p>
+
+    <h2 class="mb-4 text-4xl font-black">
+      {t.storyTitle}
+    </h2>
+
+    <p class="max-w-3xl text-lg leading-8 text-foam/85">
+      {t.storyText}
+    </p>
+  </div>
+</section>
+
+<section class="mx-auto max-w-6xl px-6 py-24 text-center">
+  <h2 class="mx-auto max-w-4xl text-5xl font-black leading-tight text-espresso md:text-7xl">
+    {t.quote}
+  </h2>
+</section>
 
     <section id="menu" class="mx-auto max-w-6xl px-6 py-16">
   <div class="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
@@ -165,7 +179,7 @@ const t = ui[lang];
       </div>
     </section>
   </main>
-  <Footer />
+  <Footer lang={lang} />
   <BackToTop />
   <script>
   const observer = new IntersectionObserver((entries) => {
