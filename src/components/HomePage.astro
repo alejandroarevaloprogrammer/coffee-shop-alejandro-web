@@ -6,9 +6,6 @@ import MenuCard from './MenuCard.astro';
 import Footer from './Footer.astro';
 import BackToTop from './BackToTop.astro';
 
-import CoffeeIcon from './icons/CoffeeIcon.astro';
-import CroissantIcon from './icons/CroissantIcon.astro';
-import LeafIcon from './icons/LeafIcon.astro';
 import CoffeeBeanIcon from './icons/CoffeeBeanIcon.astro';
 import ToastIcon from './icons/ToastIcon.astro';
 import WheatIcon from './icons/WheatIcon.astro';
@@ -16,184 +13,181 @@ import LocationIcon from './icons/LocationIcon.astro';
 import MailIcon from './icons/MailIcon.astro';
 import PhoneIcon from './icons/PhoneIcon.astro';
 
-import { ui, type Lang } from '../i18n/ui';
+import { contact, ui, type Lang } from '../i18n/ui';
 
-interface Props { lang: Lang; }
+interface Props {
+  lang: Lang;
+}
+
 const { lang } = Astro.props;
 const t = ui[lang];
 ---
-<BaseLayout
-  title={t.title}
-  description={t.description}
-  lang={lang}
->
+
+<BaseLayout title={t.title} description={t.description} lang={lang}>
   <Header lang={lang} />
+
   <main>
     <Hero lang={lang} />
 
     <section class="mx-auto max-w-6xl px-6 py-10">
-  <div class="grid gap-6 md:grid-cols-3">
-    
-    <div class="rounded-3xl bg-foam p-8 ring-1 ring-coffee/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-      <CoffeeBeanIcon class="mb-4 h-14 w-14 text-terracotta" />
-      <h3 class="mb-3 text-2xl font-black text-coffee">
-        Café de especialidad
-      </h3>
-      <p class="leading-7 text-espresso/80">
-        Seleccionamos cafés con carácter para ofrecer una experiencia auténtica en cada taza.
-      </p>
-    </div>
+      <div class="grid gap-6 md:grid-cols-3">
+        <div class="rounded-3xl bg-foam p-8 shadow-sm ring-1 ring-coffee/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+          <CoffeeBeanIcon class="mb-4 h-14 w-14 text-terracotta" />
 
-    <div class="rounded-3xl bg-foam p-8 ring-1 ring-coffee/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-      <ToastIcon class="mb-4 h-14 w-14 text-terracotta" />
-      <h3 class="mb-3 text-2xl font-black text-coffee">
-        Desayunos artesanales
-      </h3>
-      <p class="leading-7 text-espresso/80">
-        Bollería, tostadas y opciones sencillas preparadas para acompañar tu café.
-      </p>
-    </div>
+          <h3 class="mb-3 text-2xl font-black text-coffee">
+            {t.valueCoffeeTitle}
+          </h3>
 
-    <div class="rounded-3xl bg-foam p-8 ring-1 ring-coffee/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-      <WheatIcon class="mb-4 h-14 w-14 text-terracotta" />
-      <h3 class="mb-3 text-2xl font-black text-coffee">
-        Producto local
-      </h3>
-      <p class="leading-7 text-espresso/80">
-        Apostamos por ingredientes cercanos y de calidad para cuidar cada detalle.
-      </p>
-    </div>
+          <p class="leading-7 text-espresso/80">
+            {t.valueCoffeeText}
+          </p>
+        </div>
 
-  </div>
-</section>
+        <div class="rounded-3xl bg-foam p-8 shadow-sm ring-1 ring-coffee/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+          <ToastIcon class="mb-4 h-14 w-14 text-terracotta" />
+
+          <h3 class="mb-3 text-2xl font-black text-coffee">
+            {t.valueBreakfastTitle}
+          </h3>
+
+          <p class="leading-7 text-espresso/80">
+            {t.valueBreakfastText}
+          </p>
+        </div>
+
+        <div class="rounded-3xl bg-foam p-8 shadow-sm ring-1 ring-coffee/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+          <WheatIcon class="mb-4 h-14 w-14 text-terracotta" />
+
+          <h3 class="mb-3 text-2xl font-black text-coffee">
+            {t.valueLocalTitle}
+          </h3>
+
+          <p class="leading-7 text-espresso/80">
+            {t.valueLocalText}
+          </p>
+        </div>
+      </div>
+    </section>
 
     <section id="story" class="mx-auto max-w-6xl px-6 py-16">
-  <div class="rounded-[2rem] bg-coffee p-8 text-foam md:p-12">
-    <p class="mb-3 text-sm font-bold uppercase tracking-[0.25em] text-terracotta">
-      Café Alejandro
-    </p>
+      <div class="rounded-3xl bg-coffee p-8 text-foam md:p-12">
+        <p class="mb-3 text-sm font-bold uppercase tracking-[0.25em] text-terracotta">
+          {t.storyEyebrow}
+        </p>
 
-    <h2 class="mb-4 text-4xl font-black">
-      {t.storyTitle}
-    </h2>
+        <h2 class="mb-4 text-4xl font-black">
+          {t.storyTitle}
+        </h2>
 
-    <p class="max-w-3xl text-lg leading-8 text-foam/85">
-      {t.storyText}
-    </p>
-  </div>
-</section>
+        <p class="max-w-3xl text-lg leading-8 text-foam/85">
+          {t.storyText}
+        </p>
+      </div>
+    </section>
 
-<section class="mx-auto max-w-6xl px-6 py-24 text-center">
-  <h2 class="mx-auto max-w-4xl text-5xl font-black leading-tight text-espresso md:text-7xl">
-    {t.quote}
-  </h2>
-</section>
+    <section class="mx-auto max-w-6xl px-6 py-24 text-center">
+      <h2 class="mx-auto max-w-4xl text-5xl font-black leading-tight text-espresso md:text-7xl">
+        {t.quote}
+      </h2>
+    </section>
 
     <section id="menu" class="mx-auto max-w-6xl px-6 py-16">
-  <div class="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-    <div>
-      <p class="mb-3 text-sm font-bold uppercase tracking-[0.25em] text-terracotta">Nuestra carta</p>
-      <h2 class="text-4xl font-black text-coffee">{t.menuTitle}</h2>
-    </div>
-    <p class="max-w-md text-espresso/75">
-      Una selección sencilla de cafés, desayunos y dulces pensada para acompañar cualquier momento del día.
-    </p>
-  </div>
+      <div class="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+        <div>
+          <p class="mb-3 text-sm font-bold uppercase tracking-[0.25em] text-terracotta">
+            {t.menuEyebrow}
+          </p>
 
-  <div class="grid gap-6 md:grid-cols-3">
-    <div class="reveal">
-    <MenuCard
-      title="Cafés"
-      items={[
-        { name: 'Espresso', description: 'Intenso, corto y aromático.', price: '1,80€' },
-        { name: 'Americano', description: 'Suave, largo y equilibrado.', price: '2,20€' },
-        { name: 'Cappuccino', description: 'Café, leche cremosa y espuma.', price: '2,90€' },
-        { name: 'Latte', description: 'Suave, cremoso y equilibrado.', price: '3,20€' },
-        { name: 'Flat white', description: 'Doble espresso con leche sedosa.', price: '3,40€' },
-      ]}
-    />
-    </div>
+          <h2 class="text-4xl font-black text-coffee">
+            {t.menuTitle}
+          </h2>
+        </div>
 
-    <div class="reveal delay-100">
-    <MenuCard
-      title="Desayunos"
-      items={[
-        { name: 'Tostada con tomate', description: 'Pan crujiente, tomate y aceite.', price: '3,50€' },
-        { name: 'Tostada de aguacate', description: 'Aguacate, lima y semillas.', price: '6,20€' },
-        { name: 'Bocadillo pequeño', description: 'Opción sencilla para media mañana.', price: '4,20€' },
-        { name: 'Yogur con fruta', description: 'Ligero, fresco y natural.', price: '4,80€' },
-        { name: 'Zumo de naranja', description: 'Exprimido al momento.', price: '3,20€' },
-      ]}
-    />
-    </div>
+        <p class="max-w-md text-espresso/75">
+          {t.menuIntro}
+        </p>
+      </div>
 
-    <div class="reveal delay-200">
-    <MenuCard
-      title="Dulces"
-      items={[
-        { name: 'Croissant', description: 'Clásico, dorado y mantecoso.', price: '1,90€' },
-        { name: 'Pain au chocolat', description: 'Hojaldre con chocolate.', price: '2,60€' },
-        { name: 'Tarta casera', description: 'Pregunta por la tarta del día.', price: '4,50€' },
-        { name: 'Cookie artesanal', description: 'Crujiente por fuera, tierna por dentro.', price: '2,50€' },
-        { name: 'Cinnamon roll', description: 'Canela, glaseado y masa tierna.', price: '3,80€' },
-      ]}
-    />
-    </div>
-  </div>
-</section>
+      <div class="grid gap-6 md:grid-cols-3">
+        {t.menuCards.map((card, index) => (
+          <div
+            class:list={[
+              'reveal',
+              index === 1 && 'delay-100',
+              index === 2 && 'delay-200',
+            ]}
+          >
+            <MenuCard title={card.title} items={card.items} />
+          </div>
+        ))}
+      </div>
+    </section>
 
     <section id="hours" class="mx-auto max-w-6xl px-6 py-16">
       <div class="grid gap-6 md:grid-cols-2">
-        <div class="rounded-3xl bg-foam p-8 ring-1 ring-coffee/10">
-          <h2 class="mb-4 text-3xl font-black text-coffee">{t.hoursTitle}</h2>
+        <div class="rounded-3xl bg-foam p-8 shadow-sm ring-1 ring-coffee/10">
+          <h2 class="mb-4 text-3xl font-black text-coffee">
+            {t.hoursTitle}
+          </h2>
+
           <p class="whitespace-pre-line text-lg text-espresso/80">
             {t.hoursText}
           </p>
         </div>
-        <div id="contact" class="rounded-3xl bg-foam p-8 ring-1 ring-coffee/10">
-  <h2 class="mb-6 text-3xl font-black text-coffee">{t.contactTitle}</h2>
 
-  <div class="space-y-4 text-lg text-espresso/80">
-    <p class="flex items-center gap-3">
-      <LocationIcon class="h-6 w-6 text-terracotta" />
-      <span>Barcelona, Spain</span>
-    </p>
+        <div id="contact" class="rounded-3xl bg-foam p-8 shadow-sm ring-1 ring-coffee/10">
+          <h2 class="mb-6 text-3xl font-black text-coffee">
+            {t.contactTitle}
+          </h2>
 
-    <a
-      href="mailto:contact@cafealejandro.com"
-      class="flex items-center gap-3 transition hover:text-terracotta"
-    >
-      <MailIcon class="h-6 w-6 text-terracotta" />
-      <span>contact@cafealejandro.com</span>
-    </a>
+          <div class="space-y-4 text-lg text-espresso/80">
+            <p class="flex items-center gap-3">
+              <LocationIcon class="h-6 w-6 text-terracotta" />
+              <span>{t.contactLocation}</span>
+            </p>
 
-    <a
-      href="tel:+34935891179"
-      class="flex items-center gap-3 transition hover:text-terracotta"
-    >
-      <PhoneIcon class="h-6 w-6 text-terracotta" />
-      <span>+34 935 891 179</span>
-    </a>
-  </div>
-</div>
+            <a
+              href={`mailto:${contact.email}`}
+              aria-label={t.contactEmailAria}
+              class="flex items-center gap-3 transition-colors duration-300 hover:text-terracotta focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-terracotta"
+            >
+              <MailIcon class="h-6 w-6 text-terracotta" />
+              <span>{contact.email}</span>
+            </a>
+
+            <a
+              href={contact.phoneHref}
+              aria-label={t.contactPhoneAria}
+              class="flex items-center gap-3 transition-colors duration-300 hover:text-terracotta focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-terracotta"
+            >
+              <PhoneIcon class="h-6 w-6 text-terracotta" />
+              <span>{contact.phoneDisplay}</span>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
-  <Footer lang={lang} />
-  <BackToTop />
-  <script>
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      }
-    });
-  }, {
-    threshold: 0.15,
-  });
 
-  document.querySelectorAll(".reveal").forEach((element) => {
-    observer.observe(element);
-  });
-</script>
+  <Footer lang={lang} />
+  <BackToTop lang={lang} />
+
+  <script>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+          }
+        });
+      },
+      {
+        threshold: 0.15,
+      },
+    );
+
+    document.querySelectorAll('.reveal').forEach((element) => {
+      observer.observe(element);
+    });
+  </script>
 </BaseLayout>

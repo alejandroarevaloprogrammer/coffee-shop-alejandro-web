@@ -5,7 +5,9 @@ import CoffeeBeanIcon from './icons/CoffeeBeanIcon.astro';
 import ToastIcon from './icons/ToastIcon.astro';
 import WheatIcon from './icons/WheatIcon.astro';
 
-interface Props { lang: Lang; }
+interface Props {
+  lang: Lang;
+}
 
 const { lang } = Astro.props;
 const t = ui[lang];
@@ -13,40 +15,59 @@ const t = ui[lang];
 
 <section class="mx-auto grid max-w-6xl animate-fade-in items-center gap-10 px-6 py-14 md:grid-cols-2 md:py-20">
   <div>
-    <p class="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-terracotta">{t.eyebrow}</p>
-    <h1 class="mb-8 text-5xl font-black leading-tight text-coffee md:text-7xl">{t.headline}</h1>
-    <p class="mb-10 max-w-xl text-lg leading-9 text-espresso/80">{t.intro}</p>
+    <p class="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-terracotta">
+      {t.eyebrow}
+    </p>
+
+    <h1 class="mb-8 text-5xl font-black leading-tight text-coffee md:text-7xl">
+      {t.headline}
+    </h1>
+
+    <p class="mb-10 max-w-xl text-lg leading-9 text-espresso/80">
+      {t.intro}
+    </p>
 
     <div class="flex flex-wrap gap-4">
-      <a href="#menu" class="rounded-full bg-coffee px-6 py-3 font-bold text-foam shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-terracotta hover:shadow-xl">{t.primaryCta}</a>
-      <a href="#contact" class="rounded-full border border-coffee px-6 py-3 font-bold text-coffee transition-all duration-300 hover:-translate-y-1 hover:bg-coffee hover:text-foam hover:shadow-lg">{t.secondaryCta}</a>
+      <a
+        href="#menu"
+        class="rounded-full bg-coffee px-6 py-3 font-bold text-foam shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-terracotta hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-terracotta"
+      >
+        {t.primaryCta}
+      </a>
+
+      <a
+        href="#contact"
+        class="rounded-full border border-coffee px-6 py-3 font-bold text-coffee transition-all duration-300 hover:-translate-y-1 hover:bg-coffee hover:text-foam hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-terracotta"
+      >
+        {t.secondaryCta}
+      </a>
     </div>
 
     <div class="mt-8 flex flex-wrap gap-3 text-sm font-bold text-coffee">
-  <span class="flex items-center gap-2 rounded-full bg-foam px-4 py-2 shadow-sm ring-1 ring-coffee/10 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
-    <CoffeeBeanIcon class="h-6 w-6 text-terracotta" />
-    {t.heroBadgeCoffee}
-  </span>
+      <span class="flex items-center gap-2 rounded-full bg-foam px-4 py-2 shadow-sm ring-1 ring-coffee/10 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+        <CoffeeBeanIcon class="h-6 w-6 text-terracotta" />
+        {t.heroBadgeCoffee}
+      </span>
 
-  <span class="flex items-center gap-2 rounded-full bg-foam px-4 py-2 shadow-sm ring-1 ring-coffee/10 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
-    <ToastIcon class="h-6 w-6 text-terracotta" />
-    {t.heroBadgeBreakfast}
-  </span>
+      <span class="flex items-center gap-2 rounded-full bg-foam px-4 py-2 shadow-sm ring-1 ring-coffee/10 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+        <ToastIcon class="h-6 w-6 text-terracotta" />
+        {t.heroBadgeBreakfast}
+      </span>
 
-  <span class="flex items-center gap-2 rounded-full bg-foam px-4 py-2 shadow-sm ring-1 ring-coffee/10 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
-    <WheatIcon class="h-6 w-6 text-terracotta" />
-    {t.heroBadgeLocal}
-  </span>
-</div>
+      <span class="flex items-center gap-2 rounded-full bg-foam px-4 py-2 shadow-sm ring-1 ring-coffee/10 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+        <WheatIcon class="h-6 w-6 text-terracotta" />
+        {t.heroBadgeLocal}
+      </span>
+    </div>
   </div>
 
   <div class="relative overflow-hidden rounded-[2.5rem]">
-  <div class="absolute -inset-4 rounded-[2.5rem] bg-terracotta/20"></div>
+    <div class="absolute -inset-4 rounded-[2.5rem] bg-terracotta/20"></div>
 
-  <img
-    src={cafeImage.src}
-    alt="Café con el nombre Alejandro escrito sobre la espuma"
-    class="relative aspect-[4/5] w-full animate-hero-image rounded-[2.5rem] border-2 border-white object-cover shadow-[0_30px_80px_rgba(0,0,0,0.18)]"
-  />
-</div>
+    <img
+      src={cafeImage.src}
+      alt={t.heroImageAlt}
+      class="relative aspect-[4/5] w-full animate-hero-image rounded-[2.5rem] border-2 border-white object-cover shadow-[0_30px_80px_rgba(0,0,0,0.18)]"
+    />
+  </div>
 </section>

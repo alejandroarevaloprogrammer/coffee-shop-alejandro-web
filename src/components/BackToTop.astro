@@ -1,36 +1,44 @@
 ---
 import ArrowUpIcon from './icons/ArrowUpIcon.astro';
+import { ui, type Lang } from '../i18n/ui';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = ui[lang];
 ---
 
 <button
   id="backToTop"
-  aria-label="Back to top"
-  class="fixed bottom-6 right-6 z-50 flex h-12 w-12 translate-y-4 items-center justify-center rounded-full bg-coffee text-xl text-foam opacity-0 shadow-lg transition-all duration-300 hover:bg-terracotta"
+  aria-label={t.backToTopAria}
+  class="pointer-events-none fixed bottom-6 right-6 z-50 flex h-12 w-12 translate-y-4 items-center justify-center rounded-full bg-coffee text-xl text-foam opacity-0 shadow-lg transition-all duration-300 hover:bg-terracotta focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-terracotta"
 >
   <ArrowUpIcon class="h-6 w-6" />
 </button>
 
 <script>
-  const button = document.getElementById("backToTop");
+  const button = document.getElementById('backToTop');
 
   function toggleButton() {
     if (!button) return;
 
     if (window.scrollY > 300) {
-      button.classList.remove("opacity-0", "translate-y-4", "pointer-events-none");
-      button.classList.add("opacity-100", "translate-y-0");
+      button.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
+      button.classList.add('opacity-100', 'translate-y-0');
     } else {
-      button.classList.remove("opacity-100", "translate-y-0");
-      button.classList.add("opacity-0", "translate-y-4", "pointer-events-none");
+      button.classList.remove('opacity-100', 'translate-y-0');
+      button.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
     }
   }
 
-  window.addEventListener("scroll", toggleButton);
+  window.addEventListener('scroll', toggleButton);
 
-  button?.addEventListener("click", () => {
+  button?.addEventListener('click', () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   });
 

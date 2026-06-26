@@ -7,27 +7,38 @@ interface MenuItem {
 
 interface Props {
   title: string;
-  items: MenuItem[];
+  items: readonly MenuItem[];
 }
 
 const { title, items } = Astro.props;
 ---
 
 <div class="rounded-3xl bg-foam p-8 shadow-sm ring-1 ring-coffee/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:ring-coffee/20">
-  <h3 class="mb-6 text-2xl font-black text-coffee">{title}</h3>
+  <h3 class="mb-6 text-2xl font-black text-coffee">
+    {title}
+  </h3>
 
   <div class="space-y-5">
     {items.map((item, index) => (
-      <div class:list={[
-        'flex justify-between gap-4 pb-4',
-        index !== items.length - 1 && 'border-b border-coffee/10'
-      ]}>
+      <div
+        class:list={[
+          'flex justify-between gap-4 pb-4',
+          index !== items.length - 1 && 'border-b border-coffee/10',
+        ]}
+      >
         <div>
-          <p class="font-bold text-espresso">{item.name}</p>
-          <p class="text-sm text-espresso/65">{item.description}</p>
+          <p class="font-bold text-espresso">
+            {item.name}
+          </p>
+
+          <p class="text-sm text-espresso/65">
+            {item.description}
+          </p>
         </div>
 
-        <p class="shrink-0 font-black text-coffee">{item.price}</p>
+        <p class="shrink-0 font-black text-coffee">
+          {item.price}
+        </p>
       </div>
     ))}
   </div>

@@ -9,27 +9,58 @@ interface Props {
 }
 
 const { title, description, lang } = Astro.props;
+
+const SITE_URL = 'https://coffee-shop-alejandro.netlify.app';
+const canonicalUrl = `${SITE_URL}/${lang}`;
+const ogImage = `${SITE_URL}/og-image.jpg`;
 ---
+
 <!doctype html>
 <html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content={description} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="/og-image.jpg" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content="/og-image.jpg" />
 
     <title>{title}</title>
+
+    <meta name="description" content={description} />
+    <meta name="author" content="Alejandro Arevalo Rojas" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#6F4E37" />
+
+    <link rel="canonical" href={canonicalUrl} />
+
+    <link rel="alternate" hreflang="es" href={`${SITE_URL}/es`} />
+    <link rel="alternate" hreflang="ca" href={`${SITE_URL}/ca`} />
+    <link rel="alternate" hreflang="en" href={`${SITE_URL}/en`} />
+    <link rel="alternate" hreflang="x-default" href={`${SITE_URL}/es`} />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Café Alejandro" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Café Alejandro website preview" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalUrl} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content="Café Alejandro website preview" />
   </head>
+
   <body class="font-sans antialiased">
     <slot />
   </body>
