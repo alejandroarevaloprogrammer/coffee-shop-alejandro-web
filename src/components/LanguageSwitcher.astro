@@ -1,18 +1,25 @@
 ---
 import { languages, type Lang } from '../i18n/ui';
-interface Props { currentLang: Lang; }
+
+interface Props {
+  currentLang: Lang;
+}
+
 const { currentLang } = Astro.props;
 ---
-<div class="flex gap-2 text-sm font-medium">
-  {Object.entries(languages).map(([lang, label]) => (
+
+<div class="flex items-center gap-1">
+  {Object.entries(languages).map(([lang]) => (
     <a
       href={`/${lang}`}
       class:list={[
-        'rounded-full px-3 py-1 transition',
-        currentLang === lang ? 'bg-coffee text-foam' : 'bg-foam text-coffee hover:bg-terracotta hover:text-white'
+        'flex h-8 w-8 items-center justify-center rounded-full text-xs font-bold uppercase transition-all duration-200',
+        currentLang === lang
+          ? 'bg-coffee text-foam'
+          : 'bg-foam text-coffee hover:bg-terracotta hover:text-white'
       ]}
     >
-      {label}
+      {lang.toUpperCase()}
     </a>
   ))}
 </div>
