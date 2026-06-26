@@ -1,6 +1,9 @@
 ---
 import cafeImage from '../assets/images/cafe-alejandro.jpg';
 import { ui, type Lang } from '../i18n/ui';
+import CoffeeBeanIcon from './icons/CoffeeBeanIcon.astro';
+import ToastIcon from './icons/ToastIcon.astro';
+import WheatIcon from './icons/WheatIcon.astro';
 
 interface Props { lang: Lang; }
 
@@ -20,10 +23,21 @@ const t = ui[lang];
     </div>
 
     <div class="mt-8 flex flex-wrap gap-3 text-sm font-bold text-coffee">
-      <span class="rounded-full bg-foam px-4 py-2 ring-1 ring-coffee/10">☕ Café artesanal</span>
-      <span class="rounded-full bg-foam px-4 py-2 ring-1 ring-coffee/10">🥐 Desayunos</span>
-      <span class="rounded-full bg-foam px-4 py-2 ring-1 ring-coffee/10">🌿 Producto local</span>
-    </div>
+  <span class="flex items-center gap-2 rounded-full bg-foam px-4 py-2 ring-1 ring-coffee/10">
+    <CoffeeBeanIcon class="h-5 w-5 text-terracotta" />
+    {t.heroBadgeCoffee}
+  </span>
+
+  <span class="flex items-center gap-2 rounded-full bg-foam px-4 py-2 ring-1 ring-coffee/10">
+    <ToastIcon class="h-5 w-5 text-terracotta" />
+    {t.heroBadgeBreakfast}
+  </span>
+
+  <span class="flex items-center gap-2 rounded-full bg-foam px-4 py-2 ring-1 ring-coffee/10">
+    <WheatIcon class="h-5 w-5 text-terracotta" />
+    {t.heroBadgeLocal}
+  </span>
+</div>
   </div>
 
   <div class="relative">

@@ -9,6 +9,9 @@ import BackToTop from './BackToTop.astro';
 import CoffeeIcon from './icons/CoffeeIcon.astro';
 import CroissantIcon from './icons/CroissantIcon.astro';
 import LeafIcon from './icons/LeafIcon.astro';
+import CoffeeBeanIcon from './icons/CoffeeBeanIcon.astro';
+import ToastIcon from './icons/ToastIcon.astro';
+import WheatIcon from './icons/WheatIcon.astro';
 
 import { ui, type Lang } from '../i18n/ui';
 
@@ -29,7 +32,7 @@ const t = ui[lang];
   <div class="grid gap-6 md:grid-cols-3">
     
     <div class="rounded-3xl bg-foam p-8 ring-1 ring-coffee/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-      <CoffeeIcon class="mb-4 h-14 w-14 text-terracotta" />
+      <CoffeeBeanIcon class="mb-4 h-14 w-14 text-terracotta" />
       <h3 class="mb-3 text-2xl font-black text-coffee">
         Café de especialidad
       </h3>
@@ -39,7 +42,7 @@ const t = ui[lang];
     </div>
 
     <div class="rounded-3xl bg-foam p-8 ring-1 ring-coffee/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-      <CroissantIcon class="mb-4 h-14 w-14 text-terracotta" />
+      <ToastIcon class="mb-4 h-14 w-14 text-terracotta" />
       <h3 class="mb-3 text-2xl font-black text-coffee">
         Desayunos artesanales
       </h3>
@@ -49,7 +52,7 @@ const t = ui[lang];
     </div>
 
     <div class="rounded-3xl bg-foam p-8 ring-1 ring-coffee/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-      <LeafIcon class="mb-4 h-14 w-14 text-terracotta" />
+      <WheatIcon class="mb-4 h-14 w-14 text-terracotta" />
       <h3 class="mb-3 text-2xl font-black text-coffee">
         Producto local
       </h3>
