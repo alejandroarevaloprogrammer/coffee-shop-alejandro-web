@@ -87,6 +87,7 @@ const t = ui[lang];
   </div>
 
   <div class="grid gap-6 md:grid-cols-3">
+    <div class="reveal">
     <MenuCard
       title="Cafés"
       items={[
@@ -97,7 +98,9 @@ const t = ui[lang];
         { name: 'Flat white', description: 'Doble espresso con leche sedosa.', price: '3,40€' },
       ]}
     />
+    </div>
 
+    <div class="reveal delay-100">
     <MenuCard
       title="Desayunos"
       items={[
@@ -108,7 +111,9 @@ const t = ui[lang];
         { name: 'Zumo de naranja', description: 'Exprimido al momento.', price: '3,20€' },
       ]}
     />
+    </div>
 
+    <div class="reveal delay-200">
     <MenuCard
       title="Dulces"
       items={[
@@ -119,6 +124,7 @@ const t = ui[lang];
         { name: 'Cinnamon roll', description: 'Canela, glaseado y masa tierna.', price: '3,80€' },
       ]}
     />
+    </div>
   </div>
 </section>
 
@@ -161,4 +167,19 @@ const t = ui[lang];
   </main>
   <Footer />
   <BackToTop />
+  <script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  }, {
+    threshold: 0.15,
+  });
+
+  document.querySelectorAll(".reveal").forEach((element) => {
+    observer.observe(element);
+  });
+</script>
 </BaseLayout>
