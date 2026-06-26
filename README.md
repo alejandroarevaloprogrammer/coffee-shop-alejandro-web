@@ -124,7 +124,6 @@ This project includes:
 
 * GitHub: https://github.com/alejandroarevaloprogrammer
 * Portfolio: https://alejandroarevalorojas.com
-* LinkedIn: https://www.linkedin.com/in/alejandro-arevalo-rojas/
 
 ---
 
