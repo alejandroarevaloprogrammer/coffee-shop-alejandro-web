@@ -12,6 +12,9 @@ import LeafIcon from './icons/LeafIcon.astro';
 import CoffeeBeanIcon from './icons/CoffeeBeanIcon.astro';
 import ToastIcon from './icons/ToastIcon.astro';
 import WheatIcon from './icons/WheatIcon.astro';
+import LocationIcon from './icons/LocationIcon.astro';
+import MailIcon from './icons/MailIcon.astro';
+import PhoneIcon from './icons/PhoneIcon.astro';
 
 import { ui, type Lang } from '../i18n/ui';
 
@@ -84,95 +87,38 @@ const t = ui[lang];
   </div>
 
   <div class="grid gap-6 md:grid-cols-3">
-    <div class="rounded-3xl bg-foam p-8 ring-1 ring-coffee/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-      <h3 class="mb-6 text-2xl font-black text-coffee">Cafés</h3>
+    <MenuCard
+      title="Cafés"
+      items={[
+        { name: 'Espresso', description: 'Intenso, corto y aromático.', price: '1,80€' },
+        { name: 'Americano', description: 'Suave, largo y equilibrado.', price: '2,20€' },
+        { name: 'Cappuccino', description: 'Café, leche cremosa y espuma.', price: '2,90€' },
+        { name: 'Latte', description: 'Suave, cremoso y equilibrado.', price: '3,20€' },
+        { name: 'Flat white', description: 'Doble espresso con leche sedosa.', price: '3,40€' },
+      ]}
+    />
 
-      <div class="space-y-5">
-        <div class="flex justify-between gap-4 border-b border-coffee/10 pb-4">
-          <div>
-            <p class="font-bold text-espresso">Espresso</p>
-            <p class="text-sm text-espresso/65">Intenso, corto y aromático.</p>
-          </div>
-          <p class="font-black text-coffee">1,80€</p>
-        </div>
+    <MenuCard
+      title="Desayunos"
+      items={[
+        { name: 'Tostada con tomate', description: 'Pan crujiente, tomate y aceite.', price: '3,50€' },
+        { name: 'Tostada de aguacate', description: 'Aguacate, lima y semillas.', price: '6,20€' },
+        { name: 'Bocadillo pequeño', description: 'Opción sencilla para media mañana.', price: '4,20€' },
+        { name: 'Yogur con fruta', description: 'Ligero, fresco y natural.', price: '4,80€' },
+        { name: 'Zumo de naranja', description: 'Exprimido al momento.', price: '3,20€' },
+      ]}
+    />
 
-        <div class="flex justify-between gap-4 border-b border-coffee/10 pb-4">
-          <div>
-            <p class="font-bold text-espresso">Cappuccino</p>
-            <p class="text-sm text-espresso/65">Café, leche cremosa y espuma.</p>
-          </div>
-          <p class="font-black text-coffee">2,90€</p>
-        </div>
-
-        <div class="flex justify-between gap-4">
-          <div>
-            <p class="font-bold text-espresso">Latte</p>
-            <p class="text-sm text-espresso/65">Suave, cremoso y equilibrado.</p>
-          </div>
-          <p class="font-black text-coffee">3,20€</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="rounded-3xl bg-foam p-8 ring-1 ring-coffee/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-      <h3 class="mb-6 text-2xl font-black text-coffee">Desayunos</h3>
-
-      <div class="space-y-5">
-        <div class="flex justify-between gap-4 border-b border-coffee/10 pb-4">
-          <div>
-            <p class="font-bold text-espresso">Tostada con tomate</p>
-            <p class="text-sm text-espresso/65">Pan crujiente, tomate y aceite.</p>
-          </div>
-          <p class="font-black text-coffee">3,50€</p>
-        </div>
-
-        <div class="flex justify-between gap-4 border-b border-coffee/10 pb-4">
-          <div>
-            <p class="font-bold text-espresso">Bocadillo pequeño</p>
-            <p class="text-sm text-espresso/65">Opción sencilla para media mañana.</p>
-          </div>
-          <p class="font-black text-coffee">4,20€</p>
-        </div>
-
-        <div class="flex justify-between gap-4">
-          <div>
-            <p class="font-bold text-espresso">Yogur con fruta</p>
-            <p class="text-sm text-espresso/65">Ligero, fresco y natural.</p>
-          </div>
-          <p class="font-black text-coffee">4,80€</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="rounded-3xl bg-foam p-8 ring-1 ring-coffee/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-      <h3 class="mb-6 text-2xl font-black text-coffee">Dulces</h3>
-
-      <div class="space-y-5">
-        <div class="flex justify-between gap-4 border-b border-coffee/10 pb-4">
-          <div>
-            <p class="font-bold text-espresso">Croissant</p>
-            <p class="text-sm text-espresso/65">Clásico, dorado y mantecoso.</p>
-          </div>
-          <p class="font-black text-coffee">1,90€</p>
-        </div>
-
-        <div class="flex justify-between gap-4 border-b border-coffee/10 pb-4">
-          <div>
-            <p class="font-bold text-espresso">Tarta casera</p>
-            <p class="text-sm text-espresso/65">Pregunta por la tarta del día.</p>
-          </div>
-          <p class="font-black text-coffee">4,50€</p>
-        </div>
-
-        <div class="flex justify-between gap-4">
-          <div>
-            <p class="font-bold text-espresso">Cookie artesanal</p>
-            <p class="text-sm text-espresso/65">Crujiente por fuera, tierna por dentro.</p>
-          </div>
-          <p class="font-black text-coffee">2,50€</p>
-        </div>
-      </div>
-    </div>
+    <MenuCard
+      title="Dulces"
+      items={[
+        { name: 'Croissant', description: 'Clásico, dorado y mantecoso.', price: '1,90€' },
+        { name: 'Pain au chocolat', description: 'Hojaldre con chocolate.', price: '2,60€' },
+        { name: 'Tarta casera', description: 'Pregunta por la tarta del día.', price: '4,50€' },
+        { name: 'Cookie artesanal', description: 'Crujiente por fuera, tierna por dentro.', price: '2,50€' },
+        { name: 'Cinnamon roll', description: 'Canela, glaseado y masa tierna.', price: '3,80€' },
+      ]}
+    />
   </div>
 </section>
 
@@ -180,12 +126,36 @@ const t = ui[lang];
       <div class="grid gap-6 md:grid-cols-2">
         <div class="rounded-3xl bg-foam p-8 ring-1 ring-coffee/10">
           <h2 class="mb-4 text-3xl font-black text-coffee">{t.hoursTitle}</h2>
-          <p class="text-lg text-espresso/80">{t.hoursText}</p>
+          <p class="whitespace-pre-line text-lg text-espresso/80">
+            {t.hoursText}
+          </p>
         </div>
         <div id="contact" class="rounded-3xl bg-foam p-8 ring-1 ring-coffee/10">
-          <h2 class="mb-4 text-3xl font-black text-coffee">{t.contactTitle}</h2>
-          <p class="text-lg text-espresso/80">{t.contactText}</p>
-        </div>
+  <h2 class="mb-6 text-3xl font-black text-coffee">{t.contactTitle}</h2>
+
+  <div class="space-y-4 text-lg text-espresso/80">
+    <p class="flex items-center gap-3">
+      <LocationIcon class="h-6 w-6 text-terracotta" />
+      <span>Barcelona, Spain</span>
+    </p>
+
+    <a
+      href="mailto:contact@cafealejandro.com"
+      class="flex items-center gap-3 transition hover:text-terracotta"
+    >
+      <MailIcon class="h-6 w-6 text-terracotta" />
+      <span>contact@cafealejandro.com</span>
+    </a>
+
+    <a
+      href="tel:+34935891179"
+      class="flex items-center gap-3 transition hover:text-terracotta"
+    >
+      <PhoneIcon class="h-6 w-6 text-terracotta" />
+      <span>+34 935 891 179</span>
+    </a>
+  </div>
+</div>
       </div>
     </section>
   </main>

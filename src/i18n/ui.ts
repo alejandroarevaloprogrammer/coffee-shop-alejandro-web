@@ -21,8 +21,10 @@ export const ui = {
     storyTitle: 'Hecho con calma',
     storyText: 'Café Alejandro nace de una idea sencilla: buen café, buen pan y un espacio amable para empezar el día.',
     menuTitle: 'Nuestra carta', coffee: 'Cafés', breakfast: 'Desayunos', sweets: 'Dulces',
-    hoursTitle: 'Horarios', hoursText: 'Lunes a sábado · 8:00 — 18:00',
-    contactTitle: 'Contacto', contactText: 'Barcelona · info@cafealejandro.local'
+    hoursTitle: 'Horarios',
+    hoursText: 'Lunes a sábado · 07:00 — 21:00\nDomingo · 07:00 — 15:00',
+    contactTitle: 'Contacto',
+    contactText: 'Barcelona\ncontact@cafealejandro.com\n+34 935 891 179',
   },
   ca: {
     navMenu: 'Carta', navStory: 'Història', navHours: 'Horaris', navContact: 'Contacte',
@@ -38,8 +40,10 @@ export const ui = {
     storyTitle: 'Fet amb calma',
     storyText: 'Cafè Alejandro neix d’una idea senzilla: bon cafè, bon pa i un espai amable per començar el dia.',
     menuTitle: 'La nostra carta', coffee: 'Cafès', breakfast: 'Esmorzars', sweets: 'Dolços',
-    hoursTitle: 'Horaris', hoursText: 'Dilluns a dissabte · 8:00 — 18:00',
-    contactTitle: 'Contacte', contactText: 'Barcelona · info@cafealejandro.local'
+    hoursTitle: 'Horaris',
+    hoursText: 'Dilluns a dissabte · 07:00 — 21:00\nDiumenge · 07:00 — 15:00',
+    contactTitle: 'Contacte',
+    contactText: 'Barcelona\ncontact@cafealejandro.com\n+34 935 891 179',
   },
   en: {
     navMenu: 'Menu', navStory: 'Story', navHours: 'Hours', navContact: 'Contact',
@@ -55,7 +59,9 @@ export const ui = {
     storyTitle: 'Made slowly',
     storyText: 'Café Alejandro starts from a simple idea: good coffee, good bread and a welcoming place to begin the day.',
     menuTitle: 'Our menu', coffee: 'Coffee', breakfast: 'Breakfast', sweets: 'Sweets',
-    hoursTitle: 'Opening hours', hoursText: 'Monday to Saturday · 8:00 — 18:00',
-    contactTitle: 'Contact', contactText: 'Barcelona · info@cafealejandro.local'
+    hoursTitle: 'Opening hours',
+    hoursText: 'Monday to Saturday · 07:00 — 21:00\nSunday · 07:00 — 15:00',
+    contactTitle: 'Contact',
+    contactText: 'Barcelona, Spain\ncontact@cafealejandro.com\n+34 935 891 179',
   }
 } as const;
