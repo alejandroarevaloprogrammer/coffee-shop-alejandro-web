@@ -2,7 +2,7 @@
   "name": "Café Alejandro",
   "short_name": "Café Alejandro",
   "description": "Specialty coffee, homemade breakfasts and brunch.",
-  "lang": "es",
+  "lang": "en",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
