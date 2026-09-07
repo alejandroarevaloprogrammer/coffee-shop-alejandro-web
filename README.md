@@ -8,10 +8,10 @@
 
 <br>
 
-![Astro](https://img.shields.io/badge/Astro-FF5D01?style=for-the-badge\&logo=astro\&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge\&logo=tailwind-css\&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge\&logo=typescript\&logoColor=white)
-![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge\&logo=netlify\&logoColor=white)
+![Astro](https://img.shields.io/badge/Astro-FF5D01?style=for-the-badge&logo=astro&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)
 ![MIT License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
 </div>
@@ -20,7 +20,7 @@
 
 ## 🌐 Live Demo
 
-🔗 **https://coffee-shop-alejandro.netlify.app**
+🔗 **https://coffee-shop-alejandro.netlify.app/**
 
 ---
 
@@ -42,59 +42,59 @@ The project recreates the online presence of a modern café through a clean, ele
 
 ## ✨ Features
 
-* ☕ Responsive coffee shop landing page
-* 🌍 Multilingual support (Spanish, Catalan and English)
-* 📱 Mobile-first responsive design
-* 🧩 Component-based architecture
-* 🎨 Custom SVG icon system
-* ✨ Smooth animations and micro-interactions
-* ♿ Semantic HTML & accessibility
-* 🚀 SEO optimized
-* 🖼️ Open Graph & Twitter Cards
-* 🗺️ XML Sitemap
-* 🤖 Robots.txt
-* 📲 Web App Manifest
+- ☕ Responsive coffee shop landing page
+- 🌍 Multilingual support (English, Spanish and Catalan)
+- 📱 Mobile-first responsive design
+- 🧩 Component-based architecture
+- 🎨 Custom SVG icon system
+- ✨ Smooth animations and micro-interactions
+- ♿ Semantic HTML & accessibility
+- 🚀 SEO optimized
+- 🖼️ Open Graph & Twitter Cards
+- 🗺️ XML Sitemap
+- 🤖 Robots.txt
+- 📲 Web App Manifest
 
 ---
 
 ## 🛠 Tech Stack
 
-* Astro
-* Tailwind CSS
-* TypeScript
-* HTML5
-* CSS3
-* Netlify
+- Astro
+- Tailwind CSS
+- TypeScript
+- HTML5
+- CSS3
+- Netlify
 
 ---
 
 ## 🚀 Getting Started
 
-Clone the repository
+Clone the repository:
 
 ```bash
-git clone https://github.com/alejandroarevaloprogrammer/coffee-shop.git
+git clone https://github.com/alejandroarevaloprogrammer/coffee-shop-alejandro-web.git
 ```
 
-Navigate into the project
+Navigate into the project:
 
 ```bash
-cd coffee-shop
+cd coffee-shop-alejandro-web
 ```
 
-Install dependencies
+Install dependencies:
 
 ```bash
 npm install
 ```
 
-Start the development server
+Start the development server:
 
 ```bash
 npm run dev
 ```
 
-Create a production build
+Create a production build:
 
 ```bash
 npm run build
@@ -106,15 +106,15 @@ npm run build
 
 This project includes:
 
-* Canonical URLs
-* hreflang support
-* Open Graph metadata
-* Twitter Cards
-* XML Sitemap
-* Robots.txt
-* Web App Manifest
-* Theme Color
-* Optimized favicons
+- Canonical URLs
+- hreflang support
+- Open Graph metadata
+- Twitter Cards
+- XML Sitemap
+- Robots.txt
+- Web App Manifest
+- Theme Color
+- Optimized favicons
 
 ---
 
@@ -122,8 +122,9 @@ This project includes:
 
 **Alejandro Arevalo Rojas**
 
-* GitHub: https://github.com/alejandroarevaloprogrammer
-* Portfolio: https://alejandroarevalorojas.com
+- GitHub: https://github.com/alejandroarevaloprogrammer
+- Portfolio: https://alejandroarevalorojas.com
+- LinkedIn: https://www.linkedin.com/in/alejandro-arevalo-rojas/
 
 ---
 
